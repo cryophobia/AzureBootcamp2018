@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="SmileFace.InfoPage"
+             Title="Info"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/InfoPage.css"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <FlexLayout StyleClass="body">
+            <skia:SKCanvasView x:Name="canvasView"
+                           PaintSurface="Handle_PaintSurface" WidthRequest="350" HeightRequest="400" HorizontalOptions="Center"/>
+            <Label x:Name="infoLabel" FontSize="Small"
+                Text="Fetching Info ..."/>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

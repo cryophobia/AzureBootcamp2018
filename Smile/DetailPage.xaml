@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Smile.DetailPage">
+    <ContentPage.Resources>
+        <Style x:Key="flex" TargetType="FlexLayout">
+            <Setter Property="Direction" Value="Row"/>
+            <Setter Property="Wrap" Value="Wrap"/>
+            <Setter Property="AlignItems" Value="Stretch"/>
+            <Setter Property="AlignContent" Value="Start"/>
+            <Setter Property="JustifyContent" Value="SpaceBetween"/>
+        </Style>
+        <StyleSheet Source="Styles/DetailPage.css"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <FlexLayout Style="{StaticResource flex}" StyleClass="body">
+            <Image Source="detection1.jpg" 
+                   StyleClass="photo">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="detection2.jpg" 
+                   StyleClass="photo">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image Source="detection3.jpg" 
+                   StyleClass="photo, full">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image Source="detection4.jpg" 
+                   StyleClass="photo">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+            
+            <Image Source="identification1.jpg" 
+                   StyleClass="photo">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Source="identification2.jpg" 
+                   StyleClass="photo">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="Handle_Tapped"
+                        NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </FlexLayout>
+    </ScrollView>
+</ContentPage>

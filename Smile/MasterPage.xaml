@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Smile.MasterPage"
+             Padding="0,40,0,0"
+             Title="Menu" 
+             Icon="hamburger.png"
+             BackgroundColor="#3a3f44"
+             xmlns:local="using:Smile"
+             xmlns:models="using:Smile.Models"
+             xmlns:localShared="clr-namespace:SmileFace;assembly=SmileFace">
+    <StackLayout>
+        <ListView x:Name="listView" BackgroundColor="Transparent" ItemSelected="Handle_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="5,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding IconSource}" />
+                            <Label TextColor="#F1F1F1" Grid.Column="1" Text="{Binding Title}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

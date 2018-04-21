@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Smile" 
+             x:Class="Smile.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="false">
+    <ContentPage.Resources>
+        <StyleSheet Source="Styles/MainPage.css"/>
+    </ContentPage.Resources>
+    <FlexLayout StyleClass="body" x:Name="Form">
+        <FlexLayout x:Name="LoginForm" StyleClass="container">
+            <Image Source="emoji.jpg" VerticalOptions="Center" HorizontalOptions="Center" 
+                   StyleClass="logo" />
+            <FlexLayout StyleClass="login-form">
+                <Entry x:Name="UserNameEntry" IsSpellCheckEnabled="false"
+                       MaxLength="25"
+                       Placeholder="username">
+                    
+                </Entry>
+                <Entry x:Name="PasswordEntry" IsSpellCheckEnabled="false"
+                       IsPassword="true"
+                       MaxLength="25"
+                       Placeholder="password">
+                    
+                </Entry>
+                <Button Text="Log in" Clicked="Handle_Clicked"/>
+                <Button x:Name="BiometricButton" Text="Use Face Id" StyleClass="button-face" Clicked="Handle_FaceAuth">
+                    <Button.IsVisible>
+                        <OnPlatform x:TypeArguments="x:Boolean"
+                            iOS="true"
+                            Android="false"/>
+                    </Button.IsVisible>
+                </Button>
+            </FlexLayout>
+        </FlexLayout>
+
+    </FlexLayout>
+    
+</ContentPage>
